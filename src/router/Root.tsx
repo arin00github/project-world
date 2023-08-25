@@ -1,5 +1,5 @@
-import { Box } from "@chakra-ui/react";
-import { Outlet } from "react-router-dom";
+import { Box, Flex } from "@chakra-ui/react";
+import { Outlet, useNavigate } from "react-router-dom";
 
 type menuType = {
   url: string;
@@ -9,10 +9,15 @@ type menuType = {
 
 const constMenu: menuType[] = [
   { url: "/world-map", id: "world-map", label: "world" },
-  { url: "/achive-room", id: "achive-room", label: "achive room" },
+  { url: "/archive-room", id: "achive-room", label: "achive room" },
 ];
 
 const Root = () => {
+  const navigator = useNavigate();
+
+  const moveUrl = (urlString: string) => {
+    navigator(urlString);
+  };
   return (
     <Box>
       <Box
@@ -26,9 +31,22 @@ const Root = () => {
         zIndex={100}
         background={"white"}
       >
-        {constMenu.map((menu) => {
-          return <Box key={menu.id}>{menu.label}</Box>;
-        })}
+        <Flex flexDir={"column"}>
+          {constMenu.map((menu) => {
+            return (
+              <Box
+                key={menu.id}
+                onClick={() => moveUrl(menu.url)}
+                px={30}
+                h={"48px"}
+                lineHeight={"48px"}
+                _hover={{ bg: "blue.400", color: "white", cursor: "pointer" }}
+              >
+                {menu.label}
+              </Box>
+            );
+          })}
+        </Flex>
       </Box>
       <Box>
         <Outlet />
