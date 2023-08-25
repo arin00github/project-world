@@ -14,6 +14,7 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "axios": "^1.4.0",
+    "d3": "^7.8.5",
     "framer-motion": "^10.16.1",
     "ol": "^7.5.1",
     "react": "^18.2.0",
@@ -22,6 +23,7 @@
     "react-router-dom": "^6.15.0"
   },
   "devDependencies": {
+    "@types/d3": "^7",
     "@types/ol": "^7.0.0",
     "@types/prettier": "^3",
     "@types/react": "^18.2.15",
