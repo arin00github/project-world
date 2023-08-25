@@ -1,4 +1,5 @@
 import ArchivePage from "../pages/archive";
+import GlobePage from "../pages/globe";
 import WorldPage from "../pages/world";
 
 import Root from "./Root";
@@ -8,6 +9,7 @@ import { Navigate, createBrowserRouter } from "react-router-dom";
 export const pageArray = [
   { path: "/world-map", element: <WorldPage /> },
   { path: "/archive-room", element: <ArchivePage /> },
+  { path: "/globe-map", element: <GlobePage /> },
 ];
 
 const router = createBrowserRouter(

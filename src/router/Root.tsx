@@ -10,6 +10,7 @@ type menuType = {
 const constMenu: menuType[] = [
   { url: "/world-map", id: "world-map", label: "world" },
   { url: "/archive-room", id: "achive-room", label: "achive room" },
+  { url: "/globe-map", id: "globe-map", label: "globe" },
 ];
 
 const Root = () => {
