@@ -32,14 +32,15 @@ module.exports = {
               },
           ],
           pathGroupsExcludedImportTypes: ["builtin"],
-          "prettier/prettier": [
-            "error",
-            {
-                endOfLine: "auto",
-            },
-        ],
+          
       },
   ],
   "no-unused-vars": "off",
+  "prettier/prettier": [
+    "error",
+    {
+        endOfLine: "auto",
+    },
+],
   },
 }
