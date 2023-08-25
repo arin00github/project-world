@@ -28,7 +28,7 @@ const Root = () => {
         left={0}
         bottom={"40px"}
         borderRadius={`0px 12px 12px 0px`}
-        zIndex={100}
+        zIndex={1000}
         background={"white"}
       >
         <Flex flexDir={"column"}>
