@@ -15,10 +15,13 @@ const ArchivePage = () => {
       database_id: "54e82072fbff4590a759c86d86670d05",
     };
     const res = await fetch(
-      "https://project-world-archive.teru325.workers.dev",
+      "https://project-world-archive.teru325.workers.dev/",
       {
         body: JSON.stringify(bodyData),
-        method: "GET",
+        method: "POST",
+        headers: {
+          contentType: "application/json",
+        },
       },
     );
     const data = await res.json();
