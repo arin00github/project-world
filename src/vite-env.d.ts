@@ -2,6 +2,7 @@
 
 interface ImportMetaEnv {
   readonly VITE_PUBLIC_DATA_KEY: string;
+  readonly VITE_NOTION_KEY: string;
 }
 
 interface ImportMeta {

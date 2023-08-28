@@ -31,6 +31,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@chakra-ui/react", "virtual:231729b17627298dda34a6e1a77e042b29e060661f81026b059cbeb2e07aa6feb3e445862b3e9b1704b4841a1155c6b5c4ebb7d6e3ae367f751b2127fe1097ab#npm:2.8.0"],\
             ["@emotion/react", "virtual:231729b17627298dda34a6e1a77e042b29e060661f81026b059cbeb2e07aa6feb3e445862b3e9b1704b4841a1155c6b5c4ebb7d6e3ae367f751b2127fe1097ab#npm:11.11.1"],\
             ["@emotion/styled", "virtual:231729b17627298dda34a6e1a77e042b29e060661f81026b059cbeb2e07aa6feb3e445862b3e9b1704b4841a1155c6b5c4ebb7d6e3ae367f751b2127fe1097ab#npm:11.11.0"],\
+            ["@notionhq/client", "npm:2.2.12"],\
             ["@types/d3", "npm:7.4.0"],\
             ["@types/ol", "npm:7.0.0"],\
             ["@types/prettier", "npm:3.0.0"],\
@@ -3399,6 +3400,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@notionhq/client", [\
+        ["npm:2.2.12", {\
+          "packageLocation": "./.yarn/cache/@notionhq-client-npm-2.2.12-5daf912575-3f180faf4f.zip/node_modules/@notionhq/client/",\
+          "packageDependencies": [\
+            ["@notionhq/client", "npm:2.2.12"],\
+            ["@types/node-fetch", "npm:2.6.4"],\
+            ["node-fetch", "virtual:5daf9125756dba982e13fd1e8ed5b36c99d1d62c1aa4263b69e632f9079766ed4454a7bc1bb1c30bd17f8a3a5a105c7ef1fdc2ad748ec328e71c48d6cd858a62#npm:2.7.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@npmcli/fs", [\
         ["npm:3.1.0", {\
           "packageLocation": "./.yarn/cache/@npmcli-fs-npm-3.1.0-0844a57978-a50a6818de.zip/node_modules/@npmcli/fs/",\
@@ -3888,6 +3900,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-20.5.6-f7a7eed369-d2ce44f1cf.zip/node_modules/@types/node/",\
           "packageDependencies": [\
             ["@types/node", "npm:20.5.6"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/node-fetch", [\
+        ["npm:2.6.4", {\
+          "packageLocation": "./.yarn/cache/@types-node-fetch-npm-2.6.4-3e5a54c325-f3e1d881bb.zip/node_modules/@types/node-fetch/",\
+          "packageDependencies": [\
+            ["@types/node-fetch", "npm:2.6.4"],\
+            ["@types/node", "npm:20.5.6"],\
+            ["form-data", "npm:3.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6379,6 +6402,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["form-data", [\
+        ["npm:3.0.1", {\
+          "packageLocation": "./.yarn/cache/form-data-npm-3.0.1-d080d436e0-b019e8d35c.zip/node_modules/form-data/",\
+          "packageDependencies": [\
+            ["form-data", "npm:3.0.1"],\
+            ["asynckit", "npm:0.4.0"],\
+            ["combined-stream", "npm:1.0.8"],\
+            ["mime-types", "npm:2.1.35"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:4.0.0", {\
           "packageLocation": "./.yarn/cache/form-data-npm-4.0.0-916facec2d-01135bf867.zip/node_modules/form-data/",\
           "packageDependencies": [\
@@ -7867,7 +7900,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["inquirer", "npm:8.2.6"],\
             ["is-node-process", "npm:1.2.0"],\
             ["js-levenshtein", "npm:1.1.6"],\
-            ["node-fetch", "virtual:79ae919d1f1e121827919b12e7678f70d0706269d3e53ec51a656804f6b71382e59f31d432ba76ced73662610d30df33e504d288c012f86625a066853402728f#npm:2.7.0"],\
+            ["node-fetch", "virtual:5daf9125756dba982e13fd1e8ed5b36c99d1d62c1aa4263b69e632f9079766ed4454a7bc1bb1c30bd17f8a3a5a105c7ef1fdc2ad748ec328e71c48d6cd858a62#npm:2.7.0"],\
             ["outvariant", "npm:1.4.0"],\
             ["path-to-regexp", "npm:6.2.1"],\
             ["strict-event-emitter", "npm:0.4.6"],\
@@ -7936,10 +7969,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:79ae919d1f1e121827919b12e7678f70d0706269d3e53ec51a656804f6b71382e59f31d432ba76ced73662610d30df33e504d288c012f86625a066853402728f#npm:2.7.0", {\
-          "packageLocation": "./.yarn/__virtual__/node-fetch-virtual-6e73ff05be/0/cache/node-fetch-npm-2.7.0-587d57004e-d76d2f5edb.zip/node_modules/node-fetch/",\
+        ["virtual:5daf9125756dba982e13fd1e8ed5b36c99d1d62c1aa4263b69e632f9079766ed4454a7bc1bb1c30bd17f8a3a5a105c7ef1fdc2ad748ec328e71c48d6cd858a62#npm:2.7.0", {\
+          "packageLocation": "./.yarn/__virtual__/node-fetch-virtual-8f600c3f7b/0/cache/node-fetch-npm-2.7.0-587d57004e-d76d2f5edb.zip/node_modules/node-fetch/",\
           "packageDependencies": [\
-            ["node-fetch", "virtual:79ae919d1f1e121827919b12e7678f70d0706269d3e53ec51a656804f6b71382e59f31d432ba76ced73662610d30df33e504d288c012f86625a066853402728f#npm:2.7.0"],\
+            ["node-fetch", "virtual:5daf9125756dba982e13fd1e8ed5b36c99d1d62c1aa4263b69e632f9079766ed4454a7bc1bb1c30bd17f8a3a5a105c7ef1fdc2ad748ec328e71c48d6cd858a62#npm:2.7.0"],\
             ["@types/encoding", null],\
             ["encoding", null],\
             ["whatwg-url", "npm:5.0.0"]\
@@ -8454,6 +8487,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@chakra-ui/react", "virtual:231729b17627298dda34a6e1a77e042b29e060661f81026b059cbeb2e07aa6feb3e445862b3e9b1704b4841a1155c6b5c4ebb7d6e3ae367f751b2127fe1097ab#npm:2.8.0"],\
             ["@emotion/react", "virtual:231729b17627298dda34a6e1a77e042b29e060661f81026b059cbeb2e07aa6feb3e445862b3e9b1704b4841a1155c6b5c4ebb7d6e3ae367f751b2127fe1097ab#npm:11.11.1"],\
             ["@emotion/styled", "virtual:231729b17627298dda34a6e1a77e042b29e060661f81026b059cbeb2e07aa6feb3e445862b3e9b1704b4841a1155c6b5c4ebb7d6e3ae367f751b2127fe1097ab#npm:11.11.0"],\
+            ["@notionhq/client", "npm:2.2.12"],\
             ["@types/d3", "npm:7.4.0"],\
             ["@types/ol", "npm:7.0.0"],\
             ["@types/prettier", "npm:3.0.0"],\
