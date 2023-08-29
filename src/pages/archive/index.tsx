@@ -8,14 +8,14 @@ import {
 import { MapBox } from "../../components/world";
 import { pageUnit } from "../../interfaces/notion-interface";
 
-import { Badge, Box, Flex, Text } from "@chakra-ui/react";
+import { Badge, Box, Button, Flex, Text } from "@chakra-ui/react";
 
 const ArchivePage = () => {
   const [rawData, setRawData] = useState<pageUnit[]>();
 
   const testAPI = async () => {
     const res = await fetch(
-      "https://project-world-archive.teru325.workers.dev/",
+      "https://project-world-archive.teru325.workers.dev/database",
     );
     const data = await res.json();
     console.log("data", data.results);
@@ -33,7 +33,9 @@ const ArchivePage = () => {
               (select) => select.name,
             );
           } else if (entry[1].rich_text) {
-            newData[entry[0]] = entry[1].rich_text[0].plain_text;
+            newData[entry[0]] = entry[1].rich_text.length
+              ? entry[1].rich_text[0].plain_text
+              : "";
           } else if (entry[1].title) {
             newData[entry[0]] = entry[1].title[0].plain_text;
           } else {
@@ -48,6 +50,17 @@ const ArchivePage = () => {
   }, [rawData]);
   console.log("realData", realData);
 
+  const handleClickAPI = async () => {
+    const res = await fetch(
+      "https://project-world-archive.teru325.workers.dev/pages?country=france_1&post_title=france_history",
+      {
+        method: "POST",
+      },
+    );
+    const data = await res.json();
+    console.log("handleClickAPI data", data.results);
+  };
+
   useEffect(() => {
     testAPI();
   }, []);
@@ -57,15 +70,16 @@ const ArchivePage = () => {
       <FloatContainerOverlay />
       <FloatContainer>
         <SubTitle title="Archive" />
+        <Button onClick={handleClickAPI}>API POST</Button>
         <Flex flexDir={"column"}>
-          {realData?.map((dt) => {
+          {realData?.map((dt, idx) => {
             return (
-              <Flex>
+              <Flex key={`archive_notion_${idx}`}>
                 <Text w="120px">{dt["country"]}</Text>
-                <Text w="230px">{dt["post_title"]}</Text>
+                <Text w="440px">{dt["post_title"]}</Text>
                 <Text>
                   {dt["tag"].map((tg: string) => (
-                    <Badge>{tg}</Badge>
+                    <Badge key={`archive_notion_${idx}_${tg}`}>{tg}</Badge>
                   ))}
                 </Text>
               </Flex>
